@@ -1,0 +1,39 @@
+
+
+import math
+X = input()
+
+for position in range(0,len(X)):
+  if X[position] == "+":  #addition
+    firstvalue = int(X[0:position])
+    secondvalue = int(X[position+1:len(X)])
+    print(firstvalue + secondvalue)
+  if X[position] == "-":  #subtraction
+    firstvalue = int(X[0:position])
+    secondvalue = int(X[position+1:len(X)])
+    print(firstvalue - secondvalue)
+  if X[position] == "*":  #multiplication
+    firstvalue = int(X[0:position])
+    secondvalue = int(X[position+1:len(X)])
+    print(firstvalue * secondvalue)
+  if X[position] == "/":  #division
+    firstvalue = int(X[0:position])
+    secondvalue = int(X[position+1:len(X)])
+    print(firstvalue / secondvalue)
+
+
+
+
+if X[0:3] == "cos": #cosine
+ value = float(X[4:len(X)+1])
+ print(math.cos(value))
+if X[0:3] == "sin": #sine
+ value = float(X[4:len(X)+1])
+ print(math.sin(value))
+if X[0:3] == "tan": #tangent
+ value = float(X[4:len(X)+1])
+ print(math.tan(value))
+
+if X[0:4] == "sqrt": #sqare root
+ value = float(X[5:len(X)+1])
+ print(math.sqrt(value))
