@@ -1,0 +1,26 @@
+# This program takes two lines of input. 
+# The first line is a "starting time" expressed in a 24-hour clock with leading zeroes, like 08:30 or 14:07. 
+# The second line is a duration D in minutes. Print out what time it will be D minutes after the starting time. 
+# For example, for inputThis program takes two lines of input. The first line is a "starting time" expressed in a 24-hour clock with leading zeroes, like 08:30 or 14:07. 
+# The second line is a duration D in minutes. Print out what time it will be D minutes after the starting time. For example, for input
+# This question is from the Waterloo University Computer Science Circles website where you can learn basic things in Python. 
+# As a very beginner in coding and programming, I'm really excited to solve this problem and if anyone could give me some advice on this it would be great!
+
+
+T = input()
+X = int(input())
+
+for position in range(0, len(T)):   
+   if T[position] == ":":
+     H = int(T[0:position])
+     M = int(T[position+1:len(T)]) + X
+     for i in range (0, int(M/60)):
+         H = H + 1
+         M = M - 60
+         for j in range (0, int(H/24)):
+            H = H - 24
+     if H < 10:
+       H = "0" + str(H)
+     if M < 10:
+       M = "0" + str(M)           
+     print(str(H)+":"+str(M))
