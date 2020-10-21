@@ -1,0 +1,17 @@
+width = int(input())
+period = "." * width
+
+while True:
+   lineIn = input()
+   if lineIn == "END":
+      break
+   if len(lineIn) < width:
+      X = int((width - len(lineIn))/2)
+      Y = int((width - len(lineIn))/2 + 0.5)
+      print(period[0:Y]+lineIn+ period[0:X])
+   if len(lineIn) == width:
+      print(lineIn)
+         
+         
+         
+  # Here is my code for the question on Waterloo CSC website. If you have any questions or advices for me please let me know!
