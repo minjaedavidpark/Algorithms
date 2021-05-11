@@ -1,0 +1,35 @@
+This program takes two lines of input. The first line is a "starting time" expressed in a 24-hour clock with leading zeroes, like 08:30 or 14:07. The second line is a duration D in minutes. Print out what time it will be D minutes after the starting time. For example, for input
+12:30
+47
+the correct output would be 13:17. All times should be formatted as numbers between 00:00 and 23:59, but the time period may go over midnight. For example, on input
+23:59
+13
+the correct output is 00:12. 
+
+
+A = input()
+B = int(input())
+
+for position in range (0,4):
+   if A[position] == ":":
+      hour = int(A[0:position])
+      minute = int(A[position+1:6])
+      minute = minute + B
+      if minute > 60:
+         n = minute // 60
+         hour = hour + n
+         minute = minute - 60*n
+         if hour >= 24:
+            N = hour // 24
+            hour = hour - 24*N
+            
+      
+      
+      if hour < 10:
+         hour = "0" + str(hour)
+      if minute < 10:
+         minute = "0" + str(minute)
+      time = str(hour) + ":" + str(minute)
+
+print(time)        
+    
