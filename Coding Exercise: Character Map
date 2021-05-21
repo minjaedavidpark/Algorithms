@@ -47,8 +47,22 @@ for i in range(1,7):
       A = ""
       B = "" 
 
-
+#Another way to solve this
+for i in range(1,7):
+   X = " "
+   Y = ""
+   for j in range(16*i+16, 16*i+32):
       
+      X = X + chr(j) + "   "
+      if j >= 100:
+       Y = Y + str(ord(chr(j))) + " " 
+      else: 
+       Y = Y + str(ord(chr(j))) + "  "   
+   
+   
+   print("chr: "+ X)
+   print("asc: "+ Y)
+# I feel like this way is more concise and organized...
 
 
 
